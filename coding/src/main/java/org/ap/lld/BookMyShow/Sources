@@ -1,0 +1,65 @@
+LLD
+https://www.youtube.com/playlist?list=PL564gOx0bCLpAL7yMJqOuK3_hBuLkyRhn
+LLD
+https://astikanand.github.io/techblogs/high-level-system-design/design-bookmyshow
+LLD -- some good questions are vailable here
+https://www.geeksforgeeks.org/design-bookmyshow-a-system-design-interview-question/
+HLD
+https://www.linkedin.com/pulse/system-design-bookmyshow-narendra-l/
+
+request
+SearchMovies(keyword, city, lat_log, radius, start_datetime, end_datetime, postal_code, include_spell_check, results_per_page, sorting_order)
+
+response
+[
+    {
+        "MovieID": 1,
+        "ShowID": 1,
+        "Title": "Cars 2",
+        "Description": "About cars",
+        "Duration": 120,
+        "Genre": "Animation",
+        "Language": "English",
+        "ReleaseDate": "8th Oct. 2014",
+        "Country": "USA",
+        "StartTime": "14:00",
+        "EndTime": "16:00",
+        "Seats": [
+            {
+                "Type": "Regular",
+                "Price": 14.99,
+                "Status": "Almost Full"
+            },
+            {
+                "Type": "Premium",
+                "Price": 24.99,
+                "Status": "Available"
+            }
+        ]
+    },
+    {
+        "MovieID": 1,
+        "ShowID": 2,
+        "Title": "Cars 2",
+        "Description": "About cars",
+        "Duration": 120,
+        "Genre": "Animation",
+        "Language": "English",
+        "ReleaseDate": "8th Oct. 2014",
+        "Country": "USA",
+        "StartTime": "16:30",
+        "EndTime": "18:30",
+        "Seats": [
+            {
+                "Type": "Premium",
+                "Price": 24.99,
+                "Status": "Almost Full"
+            },
+            {
+                "Type": "Regular",
+                "Price": 14.99,
+                "Status": "Full"
+            }
+        ]
+    }
+]

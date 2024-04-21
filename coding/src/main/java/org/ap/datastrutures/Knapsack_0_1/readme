@@ -1,0 +1,16 @@
+Types of Knapsack
+1. Fractional Knapsack
+    We can add item in fraction, can brak the item, its greedy problem not DP problem
+2. 0-1 Knapsack
+    either item will go whole, or won't go
+    onr itrm can be added once only
+3. Unbounded Knapsack
+    It dont have limit, items will be unlimited , can be added any number of times.
+
+ Identification of Knapsack Problem
+ 1. Subset Problem
+ 2. Equal Sum partition
+ 3. Count of subset su
+ 4. Minimum Subset sum Diff
+ 5. Target Sum
+ 6. Number of subset at given difference

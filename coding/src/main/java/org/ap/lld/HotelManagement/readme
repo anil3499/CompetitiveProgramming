@@ -1,0 +1,45 @@
+
+//best material
+https://www.youtube.com/watch?v=gGzXvlmbtSI
+in same package Hotel reservation System.html page
+
+
+Hotel-related APIs
+
+API	Detail
+GET /v1/hotels/ID	Get detailed information about a hotel.
+POST /v1/hotels	Add a new hotel. This API is only available to hotel staff.
+PUT /v1/hotels/ID
+Update hotel information. This API is only available to hotel staff.
+
+DELETE /v1/hotels/ID	Delete a hotel. This API is only available to hotel staff.
+
+
+Room-related APIs
+
+API	Detail
+GET /v1/hotels/ID/rooms/ID	Get detailed information about a room.
+POST /v1/hotels/ID/rooms	Add a room. This API is only available to hotel staff.
+PUT /v1/hotels/ID/rooms/ID
+Update room information. This API is only available to hotel staff.
+
+DELETE /v1/hotels/ID/rooms/ID	Delete a room. This API is only available to hotel staff.
+
+Reservation related APIs
+
+API	Detail
+GET /v1/reservations	Get the reservation history of the logged-in user.
+GET /v1/reservations/ID	Get detailed information about a reservation.
+POST /v1/reservations	Make a new reservation.
+DELETE /v1/reservations/ID	Cancel a reservation.
+
+make reservation appi json
+{
+  "startDate":"2021-04-28",
+  "endDate":"2021-04-30",
+  "hotelID":"245",
+  "roomID":"U12354673389",
+  "reservationID":"13422445"
+}
+
+

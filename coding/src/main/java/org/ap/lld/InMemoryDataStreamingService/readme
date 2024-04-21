@@ -1,0 +1,28 @@
+Part-1
+https://medium.com/@tg6897/design-in-memory-streams-e47e49068028
+Part-2
+https://medium.com/@tg6897/design-in-memory-streams-part-2-76744f7afa11
+
+Class
+SerialStorage: This class provides wrappers over different storage data structures, such as arrays or linked lists,
+Topic: The Topic is responsible for maintaining Partitions (instances of SerialStorage) and using the defined partitioning strategy to push data into the relevant Partitions.
+Topic Partition ID: This references the partition of a topic. For example, T1<>P1 references the first partition of the topic T1.
+Broker: The Broker stores topics/partitions and acts as a client for consumers to poll data and producers to push data.
+Group Coordinator:  It is responsible for maintaining Consumer nodes and assigned/unassigned partitions of all topics it is attached to. The Group Coordinator exposes APIs for adding/removing Consumer nodes from the group and balances partitions between all connected Consumer nodes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+==================================================Functional Requirements
+Directory lookup via PhoneNumber
+Directory lookup via Name
+Spam detection
+Mark as spam
+User registration
+================================================Good to have functional requirements
+Classification as Business and business details
+Call block service
+Verified tick mark for validated users
+User should be able to export details from their contacts to truecaller directory
+User should be able to enter prefix for a number or name and view top results
+==================================================Non-functional requirements
+System should be highly available
+System should be able to perform lookup quickly
+System can be slow in propogating updates but should become consistent over time (Eventual consistency)
+System should be able to withstand power failure, system reboot and yet not lose stored data (Persistence)
+System should be easily scalable to store details of new phonenumber
+==========================================================APIs
+On basis of above details, we can conclude that TrueCaller application should expose following APIs for interaction as SDK or over network (RPC/REST/SOAP).
+
+getUserDetails(PhoneNumber)
+getUserDetails(Name)
+isSpam(PhoneNumber)
+isSpam(Name)
+markAsSpam(ITrueCallerProfile)
+addContact(Contact)
+register(ITrueCallerProfile)
+==========================================================Back-of-the-envelope calculation
+80M users.
+
+Assuming all registered users are using this service actively and 10 phone calls are received on average,
+getUserDetails API would be called (80M * 10) = 800M times a day.
+
+At peak usage, there could be 80M * 1 = 80M requests in a second!
+
+However, the number of new users registration on the system would roughly be 10K per day.
+These numbers indicate that system would be read heavy but there could be a sudden spike in write requests for a small time. Read/Write ratio = 800M/10K = 80000:1
+
+In a simple case, each user detail would comprise of following information:
+
+PhoneNumber
+Name
+isSpam
+Assuming, PhoneNumber is stored in 13 bytes (3 char for country code and 10 for phone number),
+Average name taking 15 bytes (15 characters) and isSpam (just a boolean).
+
+The amount of data stored in system would be : 160M (unique phone numbers) * 29 Bytes = ~5GB
+
+The amount of data transfered on daily basis : 800M * 29 Bytes = ~25 GB (Header data is probably more than 29 Bytes, so actual data transferred would be ~150GB)
+
+Average request per second : 800M / (24 * 60 * 60) = 10K/s
+
+Throughput : ~2MB/s
+
+Peak throughput : ~2.5GB/s (~15GB/s data with header)
+
+Data stored in system in next 5 years = 10K * 29B * 5 * 365 = ~1GB
+
+Note: Above data is only rough estimate and can vary alot with real data / final system
+https://leetcode.com/discuss/study-guide/3305288/System-Design%3A-TrueCaller
+==========================================================
+
