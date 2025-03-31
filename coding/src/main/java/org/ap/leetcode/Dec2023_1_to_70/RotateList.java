@@ -1,5 +1,6 @@
 package org.ap.leetcode.Dec2023_1_to_70;
 
+
 public class RotateList {
     public ListNode rotateRight(ListNode head, int k) {
         if(head == null || k == 0) {

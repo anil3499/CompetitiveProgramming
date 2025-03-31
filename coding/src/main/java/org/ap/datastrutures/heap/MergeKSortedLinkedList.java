@@ -1,6 +1,7 @@
 package org.ap.datastrutures.heap;
 
-import org.ms.ds.linkedlist.LinkedListNode;
+
+import org.ap.datastrutures.linkedlist.linkedlist.LinkedListNode;
 
 import java.util.Arrays;
 import java.util.Comparator;

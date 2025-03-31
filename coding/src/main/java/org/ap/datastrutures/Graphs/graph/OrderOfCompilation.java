@@ -20,7 +20,7 @@ Explanation: There are a total of 3 tasks to pick. To pick tasks 1 you should ha
 
 logic : reverse topological sort
  */
-public class OrderOfCompilation {
+/*public class OrderOfCompilation {
 
     static class Edge {
         int src;
@@ -30,9 +30,9 @@ public class OrderOfCompilation {
             this.src = src;
             this.nbr = nbr;
         }
-    }
+    }*/
 
-    public static void main(String[] args) throws Exception {
+   /* public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int vtces = Integer.parseInt(br.readLine());
@@ -71,5 +71,5 @@ public class OrderOfCompilation {
         }
         st.push(src);
     }
-}
+}*/
 

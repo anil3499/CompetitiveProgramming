@@ -1,8 +1,8 @@
 package org.ap.datastrutures.twopointers;
 
 import java.util.Collections;
+//https://leetcode.com/problems/valid-palindrome/description/
 
-//https://leetcode.com/problems/valid-palindrome/?envType=study-plan-v2&envId=top-interview-150
 public class ValidPalindrome {
     public boolean is_valid_palindrome(String s){
         boolean flag = true;

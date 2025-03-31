@@ -2,22 +2,11 @@ package org.ap.datastrutures.backtracking;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
 /*
-*Given an integer array nums and an integer k,
-*  return true if it is possible to divide this array into k non-empty subsets whose sums are all equal.
-
-Example 1:
-
-Input: nums = [4,3,2,3,5,2,1], k = 4
-Output: true
-Explanation: It is possible to divide it into 4 subsets (5), (1, 4), (2,3), (2,3) with equal sums.
-Example 2:
-
-Input: nums = [1,2,3,4], k = 3
-Output: false
-
-* */
+698. Partition to K Equal Sum Subsets
+ * leetcode- https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
+ * youtube - https://www.youtube.com/watch?v=rszwy53vaP0
+ */
 public class KSubsetsWithEqualSumPartitions {
     static ArrayList<ArrayList<Integer>>  ans = new ArrayList<>();
 
@@ -102,7 +91,34 @@ public class KSubsetsWithEqualSumPartitions {
         System.out.println(isPossibleToDivideArrayInKNonEmptySubsetsWhoseSumsAreAllEqual(new int[] {1,2,3,4}, 3));
     }
 }
+
+
 /*
-* leetcode- https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
-* youtube - https://www.youtube.com/watch?v=rszwy53vaP0
- */
+*Given an integer array nums and an integer k,
+*  return true if it is possible to divide this array into k non-empty subsets whose sums are all equal.
+
+Example 1:
+
+Input: nums = [4,3,2,3,5,2,1], k = 4
+Output: true
+Explanation: It is possible to divide it into 4 subsets (5), (1, 4), (2,3), (2,3) with equal sums.
+Example 2:
+
+Input: nums = [1,2,3,4], k = 3
+Output: false
+
+* */
+/**
+ * 0 - 6 months
+ * LinkedIn * 3
+ * Facebook * 2
+ * Adobe * 2
+ * 6 months - 1 year
+ * Yahoo * 2
+ * Amazon * 2
+ * ByteDance * 2
+ * 1 year - 2 years
+ * Bloomberg * 2
+ * Apple * 2
+ * Uber * 2
+ * */

@@ -1,7 +1,7 @@
 package org.ap.datastrutures.tree;
 
+import org.ap.datastrutures.linkedlist.linkedlist.DoublyLinkedListNode;
 import org.ap.utils.TreeNode;
-import org.ms.ds.linkedlist.DoublyLinkedListNode;
 
 public class ConvertAllLeafNodesToFromDoublyLinkedList {
     TreeNode solve(TreeNode root, DoublyLinkedListNode ans, DoublyLinkedListNode curr){

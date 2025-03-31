@@ -1,5 +1,6 @@
 package org.ap.datastrutures.array.array;
-
+//https://leetcode.com/problems/max-consecutive-ones-iii/description/
+//1004
 public class MaxConsecutiveOnesIfKflipAllowed {
     public static int countConsecutiveOnes(int[] arr, int k) {
 

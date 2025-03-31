@@ -2,7 +2,15 @@ package org.ap.datastrutures.array;
 
 import java.util.HashMap;
 import java.util.Map;
+//https://leetcode.com/problems/valid-anagram/description/
+/*
+    Time complexity:O(n).
+    Time complexity isO(n)because accessing the counter table is a constant time operation.
 
+    Space complexity:O(1).
+    Although we do use extra space, the space complexity isO(1)because the table's size stays constant no matter how largenis.
+
+* */
 /**
  * Given two strings s and t, return true if t is an anagram of s, and false otherwise.
  * An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase,

@@ -18,7 +18,8 @@ b) find the middle element of right side and make it Right child of Root Node cr
 
  */
 
-import org.ms.ds.linkedlist.LinkedListNode;
+
+import org.ap.datastrutures.linkedlist.linkedlist.LinkedListNode;
 
 public class SortedLinkedListToBalancedBST {
 

@@ -9,15 +9,38 @@ package org.ap.datastrutures.tree.binarytree;
                      /
                     11
  */
+//https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
+//leetcode 235
 
 public class LowestCommonAncestor {
-
-    public static TreeNode<Integer> getLCARecursion1(TreeNode<Integer> root, TreeNode<Integer> p1, TreeNode<Integer> p2){
-       if(p1.data < root.data && p2.data < root.data){
-         return getLCARecursion1(root.left,p1,p2);
-       }else if((p1.data > root.data && p2.data > root.data)){
-         return getLCARecursion1(root.right,p1,p2);
+    public TreeNode lowestCommonAncestor(TreeNode<Integer> root, TreeNode<Integer> p, TreeNode<Integer> q) {
+        TreeNode<Integer> temp = root;
+        while(temp != null) {
+            int rootVal = temp.data;
+            int pVal = p.data;
+            int qVal = q.data;
+            //if p & q both val are right side of root
+            if (pVal > rootVal && qVal > rootVal) {
+                temp = temp.right;
+            } else if (pVal < rootVal && qVal < rootVal) {
+                //if p & q both val are left side of root
+                temp = temp.left;
+            } else {
+                // We have found the split point, i.e. the LCA node.
+                return temp;
+            }
+        }
+        return null;
+    }
+    public static TreeNode<Integer> getLCARecursion1(TreeNode<Integer> root, TreeNode<Integer> p, TreeNode<Integer> q){
+       if(p.data < root.data && q.data < root.data){
+           //if p & q both val are left side of root
+           return getLCARecursion1(root.left,p,q);
+       }else if((p.data > root.data && q.data > root.data)){
+           //if p & q both val are right side of root
+         return getLCARecursion1(root.right,p,q);
        }else{
+           // We have found the split point, i.e. the LCA node.
            return root;
        }
     }
@@ -29,13 +52,14 @@ public class LowestCommonAncestor {
       if(root == p1 || root == p2){
           return root;
       }
-      TreeNode<Integer> left=getLCARecursion2(root.left,p1,p2);
-      TreeNode<Integer> right=getLCARecursion2(root.right,p1,p2);
-      if(left!=null && right !=null){
+      TreeNode<Integer> left = getLCARecursion2(root.left,p1,p2);
+      TreeNode<Integer> right = getLCARecursion2(root.right,p1,p2);
+
+      if(left != null && right != null){
           return root;
       }
       else{
-          return left!=null?left:right;
+          return left != null ? left : right;
       }
     }
 

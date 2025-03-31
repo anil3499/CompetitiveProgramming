@@ -17,6 +17,8 @@ Sample Input
 Sample Output
 3
  */
+//leetcode 200
+//https://leetcode.com/problems/number-of-islands/description/
 public class NumberOfIsland_6 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

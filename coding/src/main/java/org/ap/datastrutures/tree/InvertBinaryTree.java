@@ -1,25 +1,17 @@
 package org.ap.datastrutures.tree;
 
 import org.ap.utils.TreeNode;
-
+//https://leetcode.com/problems/invert-binary-tree/description/
+//https://www.youtube.com/watch?v=_i0jqdVkObU
 public class InvertBinaryTree {
-    public static TreeNode invertBT(TreeNode root){
-        if(root==null) return null;
-        TreeNode left = invertBT(root.left);
-        TreeNode right = invertBT(root.right);
-        root.right=left;
-        root.left=right;
-        return root;
 
-    }
-    public static TreeNode invertBinaryTree(TreeNode root){
-        if(root==null) return null;
-        invertBT(root.left);
-        invertBT(root.right);
-        TreeNode temp = root.right;
-        root.right=root.left;
-        root.left=temp;
+    public TreeNode invertTree(TreeNode root) {
+        if(root ==null)
+            return null;
+        TreeNode left = invertTree(root.left);
+        TreeNode right = invertTree(root.right);
+        root.left = right;
+        root.right = left;
         return root;
-
     }
 }

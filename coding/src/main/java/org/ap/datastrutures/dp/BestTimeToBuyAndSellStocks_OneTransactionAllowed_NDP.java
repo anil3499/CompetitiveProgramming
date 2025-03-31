@@ -13,14 +13,14 @@ public class BestTimeToBuyAndSellStocks_OneTransactionAllowed_NDP {
         if(prices.length == 0){
             return 0;
         }
-
-        int min=Integer.MAX_VALUE;
-        int profit=0;
-        for (int i = 0; i < prices.length; i++) {
-            min=Math.min(min,prices[i]);
-            profit=Math.max(profit,prices[i] - min);
+        int maxProffit = 0;
+        int minSoFar = prices[0];
+        for(int i=0; i < prices.length; i++) {
+            int proffit = prices[i] - minSoFar;
+            maxProffit = Math.max(proffit,maxProffit);
+            minSoFar = Math.min(minSoFar,prices[i]);
         }
-        return profit;
+        return maxProffit;
     }
 
     public static void main(String[] args) {
